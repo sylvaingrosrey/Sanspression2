@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carousel index{% endblock %}
+
+{% block body %}
+ <div class="row ml-4 mr-4">
+    <h1>Carousel index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>SrcImg</th>
+                <th>Active</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carousel in carousels %}
+            <tr>
+                <td>{{ carousel.id }}</td>
+                <td>{{ carousel.name }}</td>
+                <td>{{ carousel.srcImg }}</td>
+                <td>{{ carousel.Active ? 'Yes' : 'No' }}</td>
+                <td>{{ carousel.Description }}</td>
+                <td>
+                    <a href="{{ path('carousel_show', {'id': carousel.id}) }}" class="btn btn-outline-secondary">show</a>
+                    <a href="{{ path('carousel_edit', {'id': carousel.id}) }}" class="btn btn-outline-secondary ml-1">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+ <a href="{{ path('admin') }}" class="btn btn-outline-primary mr-3 mb-3"> <= back to menu admin</a>
+    <a href="{{ path('carousel_new') }}" class="btn btn-outline-success ml-3 mb-3">Create new</a>
+     </div>
+{% endblock %}

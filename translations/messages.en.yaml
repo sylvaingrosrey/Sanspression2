@@ -1,0 +1,36 @@
+"_local" : en
+#Page home navbar
+"BUTTON_NAV" : online ordering
+"HOME_NAV" : Home
+"CARTE_NAV" : the menu
+"MY_ACCOUNT_NAV" : my account
+"REGISTRATION_NAV" : create account
+"LOGIN_NAV" : login
+"CART_NAV" : cart
+"LOGOUT_NAV" : Logout
+
+#Page home footer
+"LOCATION_FOOTER" : Address
+"OPEN_TIME_FOOTER" : open At
+"CONTACT_US_FOOTER" : contact_us
+"MAP_FOOTER" : map
+"CONTACT_FOOTER" : Contact
+"EMAIL_FOOTER" : Email address
+"QUESTION_FOOTER" : Your request
+"TOPIC_FOOTER" : Topic
+"SUBMIT_FOOTER" : Submit
+
+#Page Index
+"PLAT_INDEX" : dishes
+"WRAP_INDEX" : Wraps
+"SALADE_INDEX" : salads
+"DESSERT_INDEX" : dessert
+
+#Page Catalogue
+"TITLE_CATALOGUE" : catalog
+"MENUS_CATALOGUE" : Menu
+"ENTREES_CATALOGUE" : Entrees
+"PLATS_CATALOGUE" : dishes
+"DESSERTS_CATALOGUE" : desserts
+"BOISSONS_CATALOGUE" : drinks
+"PROMOS_CATALOGUE" : specials

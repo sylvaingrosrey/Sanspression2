@@ -1,0 +1,11 @@
+@import "vars";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+    background-color: $secondary-color;
+}
+
+a {
+    color: $warm-color;
+}
+@import "~bootstrap/scss/bootstrap";

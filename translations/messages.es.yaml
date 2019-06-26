@@ -1,0 +1,36 @@
+"_local" : es
+#Page home navbar
+"BUTTON_NAV" : Orden en linea
+"HOME_NAV"  : Casa
+"CARTE_NAV" : La tarjeta
+"MY_ACCOUNT_NAV" : mi informacion
+"REGISTRATION_NAV" : crear una cuenta
+"LOGIN_NAV" : mi cuenta
+"CART_NAV" : mi carrito
+"LOGOUT_NAV" : desconexión
+
+#Page home footer
+"LOCATION_FOOTER" : dirección
+"OPEN_TIME_FOOTER" : tiempo abierto
+"CONTACT_US_FOOTER" : Contáctenos
+"MAP_FOOTER" : mapa
+"CONTACT_FOOTER" : Contáctenos
+"EMAIL_FOOTER" : dirección de correo electrónico
+"QUESTION_FOOTER" : Su solicitud
+"TOPIC_FOOTER" : tema
+"SUBMIT_FOOTER" : enviar a
+
+#Page Index
+"PLAT_INDEX" : platos
+"WRAP_INDEX" : envolturas
+"SALADE_INDEX" : ensaladas
+"DESSERT_INDEX" : postre
+
+#Page Catalogue
+"TITLE_CATALOGUE" : catálogo
+"MENUS_CATALOGUE" : menú
+"ENTREES_CATALOGUE" : entrantes
+"PLATS_CATALOGUE" : platos
+"DESSERTS_CATALOGUE" : postres
+"BOISSONS_CATALOGUE" : bebidas
+"PROMOS_CATALOGUE" : especiales

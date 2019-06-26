@@ -1,0 +1,38 @@
+"_local" : fr
+#Page home navbar
+"BUTTON_NAV" : Commander
+"HOME_NAV" : Accueil
+"CARTE_NAV" : La Carte
+"MY_ACCOUNT_NAV" : Mon Compte
+"REGISTRATION_NAV" : S'enregistrer
+"LOGIN_NAV" : S'identifier
+"CART_NAV" : Panier
+"LOGOUT_NAV" : Déconnection
+
+"descriptionarticle" : tgregfrtgrt
+
+#Page home footer
+"LOCATION_FOOTER" : Adresse
+"OPEN_TIME_FOOTER" : Horaires
+"CONTACT_US_FOOTER" : Contact informations
+"MAP_FOOTER" : Ou sommes nous
+"CONTACT_FOOTER" : Nous Contacter
+"EMAIL_FOOTER" : Adresse eMail
+"QUESTION_FOOTER" : Votre Demande
+"TOPIC_FOOTER" : Sujet
+"SUBMIT_FOOTER" : Envoyer
+
+#Page Index
+"PLAT_INDEX" : Plats
+"WRAP_INDEX" : Wraps
+"SALADE_INDEX" : Salade
+"DESSERT_INDEX" : Dessert
+
+#Page Catalogue
+"TITLE_CATALOGUE" : Catalogue
+"MENUS_CATALOGUE" : Menu
+"ENTREES_CATALOGUE" : Entrees
+"PLATS_CATALOGUE" : Plats
+"DESSERTS_CATALOGUE" : Desserts
+"BOISSONS_CATALOGUE" : Boissons
+"PROMOS_CATALOGUE" : Promos

@@ -1,0 +1,330 @@
+/*****menu nav*****/
+/*****end nav*****/
+/*****carousel*****/
+.navbar{
+    background-color: rgba(3, 3, 3, 0.829) !important;
+}
+.carousel-item {
+    height: 420px;
+}
+header a:hover{
+    color:#D23527 !important;
+}
+header .telephone{
+    color:#D23527  !important;
+    text-decoration: none;
+}
+header .telephone:hover{
+    color:rgb(228, 94, 82) !important;
+    text-decoration: none;
+}
+.alert-success{
+    background-color:#c82333 !important;
+    color:white !important;
+    border-color:#f80b22 !important;
+}
+.carousel-item img {
+    height: 420px;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Standard syntax */
+@keyframes example {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.entete h4 {
+    font-size: 1.8rem !important;
+    /*background-color: #C82333!important;*/
+    text-align: center;
+    color:white;
+    color:#D23527;
+
+}
+.telephone{
+    font-size:1.8rem;
+    color:#D23527;
+}
+nav a{
+    color: white !important;
+    font-size:1.6rem;
+
+}
+h4{
+    font-size:1.8rem;
+}
+.carousel-inner h4 {
+    font-size: 1.8rem !important;
+}
+.carousel-control-prev {
+    visibility: visible;
+}
+.carousel-control-next {
+    visibility: visible;
+}
+.commander {
+    margin-left: 1%;
+}
+.carousel-item  h4 {
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 3s;
+
+    background-color: #C82333 !important;
+}
+iframe{
+    height: 300px;
+    width: 400px;
+}
+.cat a{
+    margin:30px !important;
+}
+@media screen and (min-width: 501px ) and (max-width:790px){
+    iframe{
+        height: 250px;
+        width: 350px;
+    }
+    .cat a{
+        margin:10px !important;
+    }
+}
+@media screen and (max-width: 500px) {
+    iframe{
+        height: 200px;
+        width: 300px;
+    }
+    .entete h4 {
+        font-size: 1rem !important;
+        /* background-color: white !important;*/
+        color:#C82333;
+    }
+    .telephone{
+        font-size:1.2rem;
+        margin-left:0%;
+    }
+    .commander {
+        margin-left: 70%;
+    }
+    .carousel-item img {
+        height: 230px;
+    }
+    .carousel-item div h4 {
+        -webkit-animation-name: example;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 3s;
+        font-size: 1rem !important;
+        color:blue !important;
+        background-color: pink !important;
+    }
+    .carousel-control-prev {
+        /*  visibility: hidden !important;*/
+        visibility: visible;
+        top:250px!important;
+        color:red !important;
+    }
+    .carousel-control-next {
+        visibility: hidden !important;
+    }
+    .cat a{
+        margin:0px !important;
+    }
+}
+/*****end carousel*****/
+/**** menu section ***/
+/* Menu Section */
+#restaurant-menu {
+    padding: 0 0 60px 0;
+    background-color:white;
+    border-top:5px double  #c82333;
+    border-bottom:5px double  #c82333;
+}
+#restaurant-menu .section-title {
+    background: #444 url('/Images/Parallax/parallax1.jpg') center center no-repeat fixed;
+    background-size: cover 100%
+;
+    height: 400px !important;
+}
+#restaurant-menu .section-title h2 {
+    color: #fff;
+}
+#restaurant-menu img {
+    width: 300px;
+    box-shadow: 15px 0 #C82333;
+}
+#restaurant-menu h3 {
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+#restaurant-menu .menu-section hr {
+    margin: 0 auto;
+}
+#restaurant-menu .menu-section {
+    margin: 0 20px 80px;
+}
+#restaurant-menu .menu-section-title {
+    font-size: 26px;
+    display: block;
+    font-weight: 500;
+    color: #444;
+    margin: 20px 0;
+    text-align: center;
+
+}
+#restaurant-menu .menu-item {
+    margin: 35px 0;
+    font-size: 18px;
+}
+#restaurant-menu .menu-item-name {
+    font-weight: 600;
+    font-size: 17px;
+    color: #555;
+    border-bottom: 2px dotted rgb(213, 213, 213);
+}
+#restaurant-menu .menu-item-description {
+    font-style: italic;
+    font-size: 15px;
+}
+#restaurant-menu .menu-item-price {
+    float: right;
+    font-weight: 600;
+    color: #555;
+    margin-top: -26px;
+}
+/*** end menu section ***/
+/*** section la carte ***/
+#lacarte {
+    padding: 0 0 120px 0;
+}
+#lacarte .section-title {
+    background: #444 url('/Images/Parallax/parallax2.jpg') center center no-repeat fixed;
+    background-size: cover;
+    margin-bottom: 20px;
+    height: 400px !important;
+}
+#lacarte .section-title h2 {
+    color: #fff;
+}
+.lacarte-item {
+    margin: 15px 0;
+}
+.lacarte-item .hover-bg {
+    overflow: hidden;
+    position: relative;
+}
+.lacarte-item .hover-bg:before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    left: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.cat{
+    display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center
+}
+a{
+    float:left;
+    margin: 0px;
+
+}
+.cat a:hover{
+    color: #C82333 !important;
+    background-color: white !important;
+    text-decoration:none;
+}
+/*** end section la carte **/
+/**** footer *****/
+#footer .btn{
+    background-color: #C82333 !important;
+    border: none !important;
+}
+#footer .btn:hover{
+    color: #C82333 !important;
+    background-color: white !important;
+    border: 1px solid  #C82333!important;
+}
+#footer {
+    background: #262626;
+    padding: 50px 0 0 0;
+}
+#footer h3 {
+    color: #C82333;
+    /*color:#961f2f;*/
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+#footer .copyrights {
+    padding: 20px 0;
+    margin-top: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#779936+0,8eb640+50 */
+    background: rgb(112, 45, 56); /* Old browsers */
+    background: -moz-linear-gradient(top, rgb(153, 54, 71) 0%, rgb(182, 64, 64) 50%); /* FF3.6-15 */
+    /*background: -moz-linear-gradient(top, rgb(177, 48, 76) 0%, rgb(179, 30, 55) 50%);*/
+    background: -webkit-linear-gradient(top, rgba(153, 54, 71,1) 0%, rgba(182, 64, 64,1) 50%); /* Chrome10-25,Safari5.1-6 */
+    /*background: -webkit-linear-gradient(top, rgb(177, 48, 76) 0%, rgb(179, 30, 55) 50%);*/
+    background: linear-gradient(to bottom, rgba(153, 54, 71,1) 0%, rgba(182, 64, 64,1) 50%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    /*background: linear-gradient(to bottom, rgb(177, 48, 76) 0%, rgb(179, 30, 55) 50%);*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#779936', endColorstr='#8eb640', GradientType=0 ); /* IE6-9 */
+}
+#footer .social {
+    margin: 20px 0 30px 0;
+}
+#footer .social ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+#footer .social i.fa {
+    font-size: 26px;
+    padding: 4px;
+    color: #fff;
+    transition: all 0.3s;
+}
+#footer .social i.fa:hover {
+    color: #eee;
+}
+#footer p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8)
+}
+#footer a {
+    color: #f6f6f6;
+}
+#footer a:hover {
+    color: #333;
+}
+/**** footer *****/

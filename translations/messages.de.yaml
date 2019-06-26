@@ -1,0 +1,36 @@
+"_local" : de
+#Page home navbar
+"BUTTON_NAV" : bestellen
+"HOME_NAV" : Zuhause
+"CARTE_NAV" : Die Karte
+"MY_ACCOUNT_NAV" : mein Konto
+"REGISTRATION_NAV" : Erstelle ein Konto
+"LOGIN_NAV" : lregistrieren
+"CART_NAV" : Einkaufswagen
+"LOGOUT_NAV" : Unterbrechung
+
+#Page home footer
+"LOCATION_FOOTER" : Adresse
+"OPEN_TIME_FOOTER" : Offene Zeit
+"CONTACT_US_FOOTER" : Kontaktiere uns
+"MAP_FOOTER" : Karte
+"CONTACT_FOOTER" : Kontaktieren uns
+"EMAIL_FOOTER" : E-Mail-Addresse
+"QUESTION_FOOTER" : Ihre Anfrage
+"TOPIC_FOOTER" : Thema
+"SUBMIT_FOOTER" : senden
+
+#Page Index
+"PLAT_INDEX" : Geschirr
+"WRAP_INDEX" : Wraps
+"SALADE_INDEX" : Salate
+"DESSERT_INDEX" : Dessert
+
+#Page Catalogue
+"TITLE_CATALOGUE" : Karte
+"MENUS_CATALOGUE" : Speisekarte
+"ENTREES_CATALOGUE" : Vorspeisen
+"PLATS_CATALOGUE" : Geschirr
+"DESSERTS_CATALOGUE" : Desserts
+"BOISSONS_CATALOGUE" : Getränke
+"PROMOS_CATALOGUE" : Angebote

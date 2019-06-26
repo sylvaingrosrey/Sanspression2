@@ -1,0 +1,256 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "TITLE_CATALOGUE" | trans | raw }}{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .overlay { !important;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay-content
+        { !important;
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a { !important;
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+            float: unset;
+        }
+
+        .overlay a:hover, .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {font-size: 20px}
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+<body>
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "MENUS_CATALOGUE" | trans | raw }}</a>
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "ENTREES_CATALOGUE" | trans | raw }}</a>
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "PLATS_CATALOGUE" | trans | raw }}</a>
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "DESSERTS_CATALOGUE" | trans | raw }}</a>
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "BOISSONS_CATALOGUE" | trans | raw }}</a>
+        <a href="javascript:void(0)" onclick="closeNav()">{{ "PROMOS_CATALOGUE" | trans | raw }}</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-12 my-5">
+        <h2 onclick="openNav()"> {{ "MENUS_CATALOGUE" | trans | raw }} </h2>
+    </div>
+    <div class="row">
+        {% for menu in menu %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ menu.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ menu.name }}</h5>
+                        <p class="card-text">{{ menu.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                            <p>{{ menu.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                    <a href="/panier/add/{{ menu.id }}" class="btn btn-warning" data-target='{{ menu.id }}'>Ajouter</a>
+                                    {% else %}
+                                        <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ menu.id }}'>Ajouter</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12 my-5">
+        <h2>{{ "ENTREES_CATALOGUE" | trans | raw }}</h2>
+    </div>
+    <div class="row">
+    {% for entree in entree %}
+        <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+            <div class="card" style="width: 16rem;">
+                <img src="{{ entree.srcimgarticle }}" class="card-img-top" alt="...">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{ entree.name }}</h5>
+                    <p class="card-text">{{ entree.descriptionarticle }}</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>{{ entree.price }} Euros</p>
+                        </div>
+                        <div class="col-md-6">
+                            {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                <a href="/panier/add/{{ entree.id }}" class="btn btn-warning" data-target='{{ entree.id }}'>Ajouter</a>
+                            {% else %}
+                                <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ entree.id }}'>Ajouter</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <div class="col-md-12 my-5">
+        <h2>{{ "PLATS_CATALOGUE" | trans | raw }}</h2>
+    </div>
+    <div class="row">
+        {% for plat in plat %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ plat.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ plat.name }}</h5>
+                        <p class="card-text">{{ plat.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>{{ plat.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                <a href="/panier/add/{{ plat.id }}" class="btn btn-warning" data-target='{{ plat.id }}'>Ajouter</a>
+                                {% else %}
+                                    <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ plat.id }}'>Ajouter</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12 my-5">
+        <h2>{{ "DESSERTS_CATALOGUE" | trans | raw }}</h2>
+    </div>
+    <div class="row">
+        {% for dessert in dessert %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ dessert.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ dessert.name }}</h5>
+                        <p class="card-text">{{ dessert.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>{{ dessert.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                    <a href="/panier/add/{{ dessert.id }}" class="btn btn-warning" data-target='{{ dessert.id }}'>Ajouter</a>
+                                {% else %}
+                                    <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ dessert.id }}'>Ajouter</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12 my-5">
+        <h2>{{ "BOISSONS_CATALOGUE" | trans | raw }}</h2>
+    </div>
+    <div class="row">
+        {% for boisson in boisson %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ boisson.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ boisson.name }}</h5>
+                        <p class="card-text">{{ boisson.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>{{ boisson.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                    <a href="/panier/add/{{ boisson.id }}" class="btn btn-warning" data-target='{{ boisson.id }}'>Ajouter</a>
+                                {% else %}
+                                    <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ boisson.id }}'>Ajouter</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12 my-5">
+        <h2>{{ "PROMOS_CATALOGUE" | trans | raw }}Promos</h2>
+    </div>
+    <div class="row">
+        {% for promo in promo %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ promo.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ promo.name }}</h5>
+                        <p class="card-text">{{ promo.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>{{ promo.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                {% if (is_granted ('ROLE_ADMIN') == false) and (is_granted ('ROLE_USER') == true) %}
+                                    <a href="/panier/add/{{ promo.id }}" class="btn btn-warning" data-target='{{ promo.id }}'>Ajouter</a>
+                                {% else %}
+                                    <a href="{{ path('app_login') }}" class="btn btn-warning" data-target='{{ promo.id }}'>Ajouter</a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+{% endblock %}

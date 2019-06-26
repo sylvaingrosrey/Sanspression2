@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Horaires{% endblock %}
+
+{% block body %}
+<div class="container ml-5 mr-5">
+<div class="row ">
+<div class="col-12">
+    <h1>Create new Horaires</h1>
+
+    {{ include('horaires/_form.html.twig') }}
+
+    <a href="{{ path('horaires_index') }}" class="btn btn-outline-primary mb-4"><=back to list</a>
+      </div>
+    </div>
+    </div>
+{% endblock %}

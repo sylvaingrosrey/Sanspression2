@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PanierController!{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for key,article in article %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pt-5">
+                <div class="card" style="width: 16rem;">
+                    <img src="{{ article.0.srcimgarticle }}" class="card-img-top" alt="...">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ article.0.name }}</h5>
+                        <p class="card-text">{{ article.0.descriptionarticle }}</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p>{{ article.0.price }} Euros</p>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="/panier/delete/{{ key }}" class="btn btn-success">Suprimer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center my-5">
+                <h3>votre panier est de {{ count }} euros</h3>
+            </div>
+            <div class="col-md-3 my-5">
+                <a href="/panier/deleteall" class="btn btn-danger">Annuler mon panier</a>
+            </div>
+            <div class="col-md-3 my-5">
+                <a href="" class="btn btn-danger">Commander</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

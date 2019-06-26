@@ -1,0 +1,36 @@
+"_local" : tr
+#Page home navbar
+"BUTTON_NAV" : Online sipariş ver
+"HOME_NAV" : ev
+"CARTE_NAV" : Kart
+"MY_ACCOUNT_NAV" :  benim bilgilerim
+"REGISTRATION_NAV" : hesap oluştur
+"LOGIN_NAV" : hesabım
+"CART_NAV" : arabam
+"LOGOUT_NAV" : kopukluk
+
+#Page home footer
+"LOCATION_FOOTER" : adres
+"OPEN_TIME_FOOTER" : açık zaman
+"CONTACT_US_FOOTER" : bizimle iletişime geçin
+"MAP_FOOTER" : harita
+"CONTACT_FOOTER" : Bize Ulaşın
+"EMAIL_FOOTER" : E-posta
+"QUESTION_FOOTER" : İsteğiniz
+"TOPIC_FOOTER" : konu
+"SUBMIT_FOOTER" : göndermek
+
+#Page index
+"PLAT_INDEX" : bulaşıklar
+"WRAP_INDEX" : sarar
+"SALADE_INDEX" : salata
+"DESSERT_INDEX" : tatlı
+
+#Page Catalogue
+"TITLE_CATALOGUE" : katalog
+"MENUS_CATALOGUE" : Menü
+"ENTREES_CATALOGUE" : yemekler Marşlar
+"PLATS_CATALOGUE" : bulaşıklar
+"DESSERTS_CATALOGUE" : tatlılar
+"BOISSONS_CATALOGUE" : içkiler
+"PROMOS_CATALOGUE" : özel
